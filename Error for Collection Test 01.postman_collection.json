@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "85b7d39b-0b18-470e-87e2-741704727aa4",
+		"name": "Collection Test 01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Douban Movie Api",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://frodo.douban.com/api/v2/subject_collection/movie_showing/items?apiKey=054022eaeae0b00e0fc068c0c0a2102a&count=30",
+					"protocol": "https",
+					"host": [
+						"frodo",
+						"douban",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"subject_collection",
+						"movie_showing",
+						"items"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "054022eaeae0b00e0fc068c0c0a2102a"
+						},
+						{
+							"key": "count",
+							"value": "30"
+						}
+					]
+				},
+				"description": "https://frodo.douban.com/api/v2/subject_collection/movie_showing/items?start=0&count=0&apiKey=054022eaeae0b00e0fc068c0c0a2102a"
+			},
+			"response": []
+		},
+		{
+			"name": "Douban Movie API 10-1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function() {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://frodo.douban.com/api/v2/subject_collection/movie_showing/items?start=10&count=1&apiKey=054022eaeae0b00e0fc068c0c0a2102a",
+					"protocol": "https",
+					"host": [
+						"frodo",
+						"douban",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"subject_collection",
+						"movie_showing",
+						"items"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "10"
+						},
+						{
+							"key": "count",
+							"value": "1"
+						},
+						{
+							"key": "apiKey",
+							"value": "054022eaeae0b00e0fc068c0c0a2102a"
+						}
+					]
+				},
+				"description": "start=10,count=1"
+			},
+			"response": []
+		},
+		{
+			"name": "Douban Movie API 2-1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function() {\r",
+							"    pm.response.to.have.status(403);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://frodo.douban.com/api/v2/subject_collection/movie_showing/items?start=2&count=1&apiKey=054022eaeae0b00e0fc068c0c0a2102a",
+					"protocol": "https",
+					"host": [
+						"frodo",
+						"douban",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"subject_collection",
+						"movie_showing",
+						"items"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2"
+						},
+						{
+							"key": "count",
+							"value": "1"
+						},
+						{
+							"key": "apiKey",
+							"value": "054022eaeae0b00e0fc068c0c0a2102a"
+						}
+					]
+				},
+				"description": "start=2,count=1"
+			},
+			"response": []
+		},
+		{
+			"name": "Douban Movie Api 5-2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://frodo.douban.com/api/v2/subject_collection/movie_showing/items?start=5&count=2&apiKey=054022eaeae0b00e0fc068c0c0a2102a",
+					"protocol": "https",
+					"host": [
+						"frodo",
+						"douban",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"subject_collection",
+						"movie_showing",
+						"items"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "5"
+						},
+						{
+							"key": "count",
+							"value": "2"
+						},
+						{
+							"key": "apiKey",
+							"value": "054022eaeae0b00e0fc068c0c0a2102a"
+						}
+					]
+				},
+				"description": "start=5,count=2"
+			},
+			"response": []
+		},
+		{
+			"name": "Douban Movie Api 20-3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://frodo.douban.com/api/v2/subject_collection/movie_showing/items?start=20&count=3&apiKey=054022eaeae0b00e0fc068c0c0a2102a",
+					"protocol": "https",
+					"host": [
+						"frodo",
+						"douban",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"subject_collection",
+						"movie_showing",
+						"items"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "20"
+						},
+						{
+							"key": "count",
+							"value": "3"
+						},
+						{
+							"key": "apiKey",
+							"value": "054022eaeae0b00e0fc068c0c0a2102a"
+						}
+					]
+				},
+				"description": "start=20,count=3"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(pm.iterationData.toObject())"
+				]
+			}
+		}
+	]
+}
